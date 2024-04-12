@@ -25,7 +25,7 @@ export default class Slack {
   async getUserId(email) {
     const response = await this.#slackFetch('users.lookupByEmail', {email});
     const body = await response.json();
-    return body.user.id;
+    return body?.user?.id;
   }
 
   async setUserProfile(user, fields) {
