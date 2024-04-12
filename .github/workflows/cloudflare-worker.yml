@@ -14,4 +14,9 @@ jobs:
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
-          workingDirectory: .
+          secrets: |
+            BASIC_AUTH
+            SLACK_TOKEN
+        env:
+          BASIC_AUTH: ${{ secrets.BASIC_AUTH }}
+          SLACK_TOKEN: ${{ secrets.SLACK_TOKEN }}

@@ -1,3 +1,4 @@
 name = "bob-slack-integration"
 main = "index.js"
 compatibility_date = "2024-04-11"
+node_compat = true
