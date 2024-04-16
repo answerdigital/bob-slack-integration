@@ -1,3 +1,5 @@
+import fieldMapping from './field-mapping.json';
+
 export default class Slack {
   #token;
 
@@ -29,11 +31,6 @@ export default class Slack {
   }
 
   async setUserProfile(user, fields) {
-    const fieldMapping = {
-      capability: 'Xf06TR53N5T8',
-      contractedLocation: 'Xf06TR5K2PQE',
-    };
-
     const profile = Object.keys(fields).reduce((acc, field) => {
       acc[fieldMapping[field] || field] = fields[field];
       return acc;
