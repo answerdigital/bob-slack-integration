@@ -9,11 +9,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Get Wrangler version
+        id: wrangler_version
+        run: |
+          echo "npm=$(jq -r .dependencies.wrangler package.json | sed 's/\^//')" >> "$GITHUB_OUTPUT"
       - name: Deploy Cloudflare Worker
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACCOUNT_ID }}
+          wranglerVersion: ${{ steps.wrangler_version.outputs.npm }}
           secrets: |
             BASIC_AUTH
             SLACK_TOKEN
