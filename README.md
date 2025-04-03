@@ -1,17 +1,9 @@
-# HiBob / Slack Profile Updater
+# HiBob to Slack Profile Updater
 
-Keeps Slack profiles updated via API using a HiBob integration.
+Syncs changes from HiBob to Slack
 
-## Running Locally
 
-Firstly, enter local secrets in dotenv format in a `.dev.vars` file:
+## TODO
 
-```
-SLACK_TOKEN=xoxp-....
-```
-
-Then start the dev server:
-
-```bash
-npm run dev
-```
+- Finish Terraform files once [Cloudflare issue #5331](https://github.com/cloudflare/terraform-provider-cloudflare/issues/5331) has been fixed
+- Modify Python code to allow for dynamic list of items to sync
