@@ -10,11 +10,16 @@ id = "b2f573ded4474502956a87ad1be95e13"
 preview_id = "a0a8d34c42ff4ef18666ee128c508735"
 
 [vars]
-fields = "root.id,root.email,root.displayName,/work/title,personal.pronouns,work.customColumns.column_1693476959605"
-bob_custom_level_column = "work.customColumns.column_1693476959605"
+fields = "root.id,root.email,root.displayName,/work/title,personal.pronouns,work.customColumns.column_1693476959605,work.department,work.custom.field_1706286455610,work.startDate"
+bob_check_fields = "work.customColumns.column_1693476959605,/work/title"
 bob_custom_level_column_short = "column_1693476959605"
+bob_custom_disc_column_short = "field_1706286455610"
 bob_endpoint = 'https://api.hibob.com/v1/people/'
 slack_lookupemail_endpoint = 'https://slack.com/api/users.lookupByEmail'
 slack_setuser_endpoint = 'https://slack.com/api/users.profile.set'
 slack_title_field_id = 'Xf08HU7HLVM1'
 slack_level_field_id = 'Xf08DNL0T80G'
+slack_capability_field_id = 'Xf06UJSWLXL3'
+slack_start_date_field_id = 'Xf08QS2PN0H1'
+slack_disc_profile_field_id = 'Xf08TEMTNSHY'
+slack_contractedLocation_field_id = 'Xf06TR5K2PQE'
